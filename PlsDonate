@@ -5,5 +5,9 @@ local Raisedthen = plr.leaderstats.Raised.Value
 while wait(0.01) do
 local RaisedNow = plr.leaderstats.Raised.Value
 local raised = Raisedthen - RaisedNow
+if raised ~= 0 then
 rootpart.CFrame = rootpart.CFrame * CFrame.Angles(0,math.rad(raised),0)
+else
+rootpart.CFrame = rootpart.CFrame * CFrame.Angles(0,math.rad(1),0)
+end
 end
