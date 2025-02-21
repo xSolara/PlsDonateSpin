@@ -1,0 +1,9 @@
+local plr = game.Players.LocalPlayer
+local chr = plr.Character
+local rootpart = chr:FindFirstChild("HumanoidRootPart")
+local Raisedthen = plr.leaderstats.Raised.Value
+while wait(0.01) do
+local RaisedNow = plr.leaderstats.Raised.Value
+local raised = Raisedthen - RaisedNow
+rootpart.CFrame = rootpart.CFrame * CFrame.Angles(0,math.rad(raised),0)
+end
